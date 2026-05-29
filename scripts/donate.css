@@ -1,0 +1,143 @@
+/* --- Pure CSS Layout Rules --- */
+
+.donate-card-btn {
+    cursor: pointer;
+    border: 2px solid rgba(12, 67, 46, 0.1);
+    border-radius: 16px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.donate-amount-radio {
+    display: none !important;
+}
+
+.donate-amount-radio:checked + .donate-card-btn {
+    border-color: #c5dc6c;
+    background-color: rgba(197, 220, 108, 0.05);
+    box-shadow: 0 8px 20px rgba(12, 67, 46, 0.05);
+    transform: translateY(-2px);
+}
+
+.donate-amount-radio:checked + .donate-card-btn h4 {
+    color: #0c432e !important;
+}
+
+.btn-submit-donation {
+    background-color: #2da767;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit-donation:hover {
+    background-color: #249359;
+    color: #ffffff;
+}
+
+/* CSS Selection Tab Grid Engine */
+.payment-system-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pay-toggle-input {
+    display: none !important;
+}
+
+.pay-toggle-label {
+    flex: 1 1 calc(50% - 8px);
+    border: 1.5px solid rgba(12, 67, 46, 0.15);
+    color: #0c432e;
+    background-color: #ffffff;
+    padding: 14px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .pay-toggle-label {
+        flex: 1;
+    }
+    .label-intl-width {
+        flex: 1 1 100% !important;
+        order: 4;
+    }
+}
+
+.pay-toggle-label:hover {
+    background-color: #f8faf9;
+    border-color: #2da767;
+}
+
+.pay-toggle-input:checked + .pay-toggle-label {
+    background-color: #0c432e;
+    border-color: #0c432e;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(12, 67, 46, 0.15);
+}
+
+/* Hidden container details box components */
+.pay-content-pane {
+    display: none;
+    width: 100%;
+    order: 10;
+    background-color: #fbfdfc;
+    border-color: rgba(12, 67, 46, 0.12) !important;
+}
+
+.pay-content-pane strong {
+    font-family: monospace, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Conditional CSS Engine rule mapping */
+.pay-toggle-input:checked + .pay-toggle-label + .pay-content-pane {
+    display: block !important;
+}
+
+.donate-hero-section .ambient-glow-backdrop {
+    top: 10%;
+    right: 5%;
+}
+
+.donation-glass-card {
+    border-radius: 32px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.donation-info-side {
+    background: linear-gradient(135deg, #0c432e 0%, #2da767 100%);
+}
+
+.donation-info-side .badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #c5dc6c;
+    font-weight: 700;
+}
+
+.donation-info-side h2 {
+    letter-spacing: -0.02em;
+    font-size: 2.3rem;
+}
+
+.donation-info-side p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.donation-step-title {
+    color: #0c432e !important;
+}

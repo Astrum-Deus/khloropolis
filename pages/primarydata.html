@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Data | Khloropolis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scripts/style.css">
+    <link rel="stylesheet" href="../scripts/primarydata.css">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="p-0 bg-light" data-bs-spy="scroll" data-bs-target="#spy-nav" data-bs-smooth-scroll="true">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <nav class="navbar navbar-expand-lg shadow px-3 sticky-md-top bg-white">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../assets/logo.png" alt="logo" id="logoImage">
+           
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-id"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="nav-id">
+        <ul class="navbar-nav ms-2" >
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link underlineNav"><i class="bi bi-house-fill me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link underlineNav"><i class="bi bi-people-fill me-1"></i> About</a>
+            </li>
+            <li class="nav-item">
+                <a href="solutions.html" class="nav-link underlineNav"><i class="bi bi-book-fill me-1"></i> Solutions</a>
+            </li>
+            <li class="nav-item">
+                <a href="projects.html" class="nav-link underlineNav"><i class="bi bi-bag-dash-fill me-1"></i> Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="primarydata.html" class="nav-link activeNav"><i class="bi bi-clipboard2-data-fill me-1"></i> Primary Data</a>
+            </li>
+            <li class="nav-item dropdown">
+
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-lightbulb-fill me-1"></i> Articles</a>
+                <ul class="dropdown-menu bg-white">
+                    <li>
+                        <a href="articles/article1.html" class="dropdown-item">Effects of artificial fertilizers to the environment</a>
+                    </li>
+                    <li>
+                        <a href="articles/article2.html" class="dropdown-item">Technology-based agriculture</a>
+                    </li>
+                    <li>
+                        <a href="articles/article3.html" class="dropdown-item">Innovative ways of gardening indoor </a>
+                    </li>
+                    <li>
+                        <a href="articles/article4.html" class="dropdown-item">Ways to implement a mini plantation in your apartment </a>
+                    </li>                    
+                        <a href="articles/article5.html" class="dropdown-item">Sustainable and resource efficient farm </a>
+                    </li>               
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ms-4">
+            <li class="nav-item">
+                <a href="donate.html" class="nav-link underlineNav"><i class="bi bi-cash-stack me-1"></i> Donate</a>
+            </li>
+            
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a href="" class="nav-link underlineNav" data-bs-target="#SignIn" data-bs-toggle="modal">Join Us</a>
+            </li>
+            
+        </ul>
+        </div>
+    </nav>
+<div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                
+                <div class="modal-header border-0 pb-0 d-block position-relative">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-shadow="none" data-bs-dismiss="modal"></button>
+                    
+                    <ul class="nav auth-tabs" id="authTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin-pane" type="button" role="tab" aria-controls="signin-pane" aria-selected="true">Sign In</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-pane" type="button" role="tab" aria-controls="signup-pane" aria-selected="false">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-body px-0 pb-0 pt-4">
+                    <div class="tab-content" id="authTabContent">
+                        
+                        <div class="tab-pane fade show active" id="signin-pane" role="tabpanel" aria-labelledby="signin-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signinEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signinEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <label for="signinPassword" class="form-label mb-0">Password</label>
+                                        <a href="#" class="text-decoration-none small accent-link">Forgot?</a>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signinPassword" placeholder="••••••••" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label text-muted small" for="rememberMe">Keep me signed in</label>
+                                </div>
+                                <a href="../index.html"><button type="submit" class="btn btn-primary w-100 mb-3">Sign Into Account</button></a>
+                            </form>
+
+                            <div class="divider">or continue with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                        <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a> 
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="signup-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signupName" class="form-label">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="signupName" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signupEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupPassword" placeholder="Minimum 8 characters" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mb-3"  data-bs-toggle="tab" data-bs-target="#signup-pane">Create Free Account</button>
+                            </form>
+
+                            <div class="divider">or register with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                    <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a>
+                                </button>
+                            </div>
+                            
+                            <p class="text-center text-muted small mt-4 mb-0">
+                                By signing up, you agree to our <a href="#" class="text-decoration-none accent-link">Terms of Service</a> and <a href="#" class="text-decoration-none accent-link">Privacy Policy</a>.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+<header class="container-fluid branding-hero-section position-relative d-flex align-items-center justify-content-center text-center py-5">
+    <div class="hero-dark-overlay"></div>
+    
+    <div class="container position-relative z-3 py-5 text-white">
+        <h1 class="hero-main-display fw-bold mb-3" data-aos="fade-down" data-aos-duration="1000">Primary Data & Real Life Impact</h1>
+        <p class="hero-sub-description mx-auto mb-4 text-light" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Our Team has also collected primary data from locals, experts online to acquire valuable primary information, and has done personal interventions in Myanmar to improve the lives of the people and the environment. We have documented all of these efforts and findings in this section.
+        </p>
+        <div class="d-flex justify-content-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+            <a href="#rla-display-section" class="hero-scroll-circle d-flex align-items-center justify-content-center text-decoration-none">
+                <i class="bi bi-arrow-down-short"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="rla-display-section" class="container-fluid rla-showcase py-5 bg-light">
+    <div class="container py-4">
+
+        <div class="row mb-4 text-center">
+            <div class="col-12">
+                <div class="d-flex align-items-center justify-content-center gap-3 mb-2" data-aos="fade-up">
+                    <span class="title-deco-line"></span>
+                    <h2 class="showcase-main-title fw-bold m-0">Our Real Life Activities</h2>
+                    <span class="title-deco-line"></span>
+                </div>
+                <p class="showcase-subtitle text-muted small" data-aos="fade-up" data-aos-delay="100">These are the activities we have undertaken in as our courses of action.</p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
+            <ul class="nav nav-pills rla-filter-pills gap-2" id="programFilters" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="filter-all-tab" data-bs-toggle="pill" data-bs-target="#pane-all" type="button" role="tab" aria-selected="true">Community Participation Campaign</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="filter-bach-tab" data-bs-toggle="pill" data-bs-target="#pane-bachelors" type="button" role="tab" aria-selected="false">Spreading Information</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="filterPanelsViewport" data-aos="fade-up" data-aos-delay="300">
+            
+            <div class="tab-pane fade show active" id="pane-all" role="tabpanel" aria-labelledby="filter-all-tab">
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-lg-6">
+                        <div class="rla-card position-relative overflow-hidden rounded-4">
+                            <img src="../assets/CPCShine.jpg" alt="Sample" class="card-bg-img w-100 h-100 object-fit-cover">
+                            <div class="card-hover-overlay d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                <h4 class="hover-display-title fw-bold">In Yangon</h4>
+                                <p class="hover-display-desc mb-0 mt-2 small text-light">We conducted a community participation campaign in Yangon to integrate more greenery into the local's homes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="rla-card position-relative overflow-hidden rounded-4">
+                            <img src="../assets/LillianCPC.jpg" alt="Sample" class="card-bg-img w-100 h-100 object-fit-cover">
+                            <div class="card-hover-overlay d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                <h4 class="hover-display-title fw-bold">In Mandalay</h4>
+                                <p class="hover-display-desc mb-0 mt-2 small text-light">We conducted a community participation campaign in Mandalay to educate residents about the benefits of urban gardening.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pane-bachelors" role="tabpanel" aria-labelledby="filter-bach-tab">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="rla-card position-relative overflow-hidden rounded-4">
+                            <img src="..//assets/LeafletShine.jpg" alt="Sample" class="card-bg-img w-100 h-100 object-fit-cover">
+                            <div class="card-hover-overlay d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                <h4 class="hover-display-title fw-bold">Spreading Leaflets - Yangon</h4>
+                                <p class="hover-display-desc mb-0 mt-2 small text-light">We shared leaflets in Yangon to raise awareness about the importance of green spaces in urban environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="rla-card position-relative overflow-hidden rounded-4">
+                            <img src="..//assets/LeafletAung.jpg" alt="Sample" class="card-bg-img w-100 h-100 object-fit-cover">
+                            <div class="card-hover-overlay d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                <h4 class="hover-display-title fw-bold">Spreading Leaflets - NayPyiTaw</h4>
+                                <p class="hover-display-desc mb-0 mt-2 small text-light">We shared leaflets in NayPyiTaw to raise awareness about the importance of green spaces in urban environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+        </div>
+
+    </div>
+</section>
+
+<section class="container-fluid interview-section py-5 bg-light">
+    <div class="container py-4">
+
+        <div class="row mb-5 text-center" data-aos="fade-up">
+            <div class="col-12">
+                <h2 class="interview-main-title fw-bold mb-2">The Expert's Perspective</h2>
+                <div class="interview-title-underline mx-auto mt-2"></div>
+                <p class="interview-summary text-muted">We interviewed experts for their opinion on the integration of greenery into our cities.</p>
+            </div>
+            
+        </div>
+
+        <div class="d-flex flex-column gap-5 mx-auto" style="max-width: 1000px;">
+
+            <div class="row g-0 interview-row-card rounded-4 overflow-hidden shadow-sm" data-aos="fade-right">
+                <div class="col-md-4 profile-accent-bg d-flex align-items-center justify-content-center p-4">
+                    <div class="profile-frame-wrapper text-center">
+                        <div class="profile-frame mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-person-fill text-white"></i>
+                        </div>
+                        <h4 class="profile-name fw-bold m-0">U Than Htun</h4>
+                        <span class="profile-tag small text-white-50">Founder of Ever Win Construction Co. Ltd.</span>
+                    </div>
+                </div>
+                <div class="col-md-8 content-display accent-bg p-4 p-lg-5 d-flex flex-column justify-content-between">
+                    <div class="mb-4">
+                        <h3 class="interview-heading fw-bold mb-3">U Than Htun's Perspective</h3>
+                        <p class="interview-summary text-muted">
+                            This interview is about the current problems with Naypyitaw's greenery and agriculture, government plans and improvement the agricultural industry could make to enhance urban gardens and farm.
+                        </p>
+                        <blockquote class="quote-block" data-aos="zoom-in" data-aos-duration="1000">
+                            <p>“The problem with our greenspaces is the lack of proper rulekeeping and maintenance.”</p>
+                            <div class="quote-author">- U Than Htun, Founder of Ever Win Construction Co. Ltd.</div>
+                        </blockquote>
+                    </div>
+                    <div class="video-player-frame rounded-3 overflow-hidden shadow-sm">
+                        <iframe
+                        src="https://player.mux.com/e4HxHrd6NY300QsSmou5X63arrcwM6JX81m2s9k6p2b8?metadata-video-title=UThanHtun&video-title=UThanHtun"
+                        class="w-100 h-100 object-fit-cover"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0 interview-row-card flex-md-row-reverse rounded-4 overflow-hidden shadow-sm" data-aos="fade-left">
+                <div class="col-md-4 profile-accent-bg d-flex align-items-center justify-content-center p-4">
+                    <div class="profile-frame-wrapper text-center">
+                        <div class="profile-frame mx-auto mb-3 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-person-fill text-white"></i>
+                        </div>
+                        <h4 class="profile-name fw-bold m-0">U Wizaya Nay Kyaw</h4>
+                        <span class="profile-tag small text-white-50">Manager of United TEC Construction PTE. Ltd.</span>
+                    </div>
+                </div>
+                <div class="col-md-8 content-display-bg p-4 p-lg-5 d-flex flex-column justify-content-between">
+                    <div class="mb-4">
+                        <h3 class="interview-heading fw-bold mb-3">U Wizaya Nay Kyaw’s Perspective</h3>
+                        <p class="interview-summary text-muted">
+                            This interview discuss about sustainable solutions and ways to implement smart and sustainability into cities with urban gardens and innovative urban gardens like rooftop gardens. And it discuss about some of Singapore's urban gardens and rooftop gardens.
+                        </p>
+                        <blockquote class="quote-block" data-aos="zoom-in" data-aos-duration="1000">
+                            <p>“Urban gardening is a great way to apply sustainability and promote farming in urban areas”</p>
+                            <div class="quote-author">- U Wizaya Nay Kyaw, Manager of United TEC Construction PTE. Ltd.</div>
+                        </blockquote>
+                    </div>
+                    <div class="video-player-frame rounded-3 overflow-hidden shadow-sm">
+                        <iframe
+                        src="https://player.mux.com/brmLkmo98ZSfLizhyhcnzEBbVvWJYNe013GBdhsZLAYE?metadata-video-title=UWizaya&video-title=UWizaya"
+                        class="w-100 h-100 object-fit-cover"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+    <footer class="footer-section text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row g-3">
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <div class="logo-icon me-2">
+            <img src="../assets/logo.png" alt="logo">
+          </div>
+          <div>
+            <h4 class="mb-0 fw-bold">Khloropolis</h4>
+            <small class="text-success-light">Making cities greener since 2026.</small>
+          </div>
+        </div>
+        <p class="small text-light-o">Here at Khloropolis, we provide a gateway to sustainable urban agriculture and green living!</p>
+        <div class="social-links d-flex gap-2">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/aboutus.html">About Us</a></li>
+          <li><a href="pages/solutions.html">Solutions</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/primary-data.html">Primary Data</a></li>
+          
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Articles</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="pages/articles/article1.html">Effects of artificial fertilizers</a></li>
+          <li><a href="pages/articles/article2.html">Technology-based agriculture</a></li>
+          <li><a href="pages/articles/article3.html">Innovative ways of gardening indoor</a></li>
+          <li><a href="pages/articles/article4.html">Ways to implement a mini plantation in your apartment</a></li>
+          <li><a href="pages/articles/article5.html">Sustainable and resource efficient farm</a></li>
+        </ul>
+      </div>
+
+
+
+    <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Stay Updated</h5>
+        <p class="small text-light-o">Subscribe to our newsletter for park updates and wellness tips.</p>
+        <div class="newsletter-form">
+            <input type="email" class="form-control newsletter-input mb-3" placeholder="Your email address">
+            <button class="btn btn-brand-primary w-100 fw-bold rounded-pill">Subscribe</button>
+        </div>
+    </div>
+
+     
+    </div>
+
+
+
+    <hr class="border-secondary mt-4">
+    <div class="text-center small text-light-o">
+      &copy; 2026 Khloropolis. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
