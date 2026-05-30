@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Khloropolis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="scripts/style.css">
+    <link rel="stylesheet" href="scripts/index.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="p-0" data-bs-spy="scroll" data-bs-target="#spy-nav" data-bs-smooth-scroll="true">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <nav class="navbar navbar-expand-lg shadow px-3 sticky-md-top bg-white">
+        <a href="index.html" class="navbar-brand">
+            <img src="assets/logo.png" alt="logo" id="logoImage">
+           
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-id"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="nav-id">
+        <ul class="navbar-nav ms-2" >
+            <li class="nav-item">
+                <a href="index.html" class="nav-link activeNav"><i class="bi bi-house-fill me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/aboutus.html" class="nav-link underlineNav"><i class="bi bi-people-fill me-1"></i> About</a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/solutions.html" class="nav-link underlineNav"><i class="bi bi-book-fill me-1"></i> Solutions</a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/projects.html" class="nav-link underlineNav"><i class="bi bi-bag-dash-fill me-1"></i> Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/primarydata.html" class="nav-link underlineNav"><i class="bi bi-clipboard2-data-fill me-1"></i> Primary Data</a>
+            </li>
+            <li class="nav-item dropdown">
+
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-lightbulb-fill me-1"></i> Articles</a>
+                <ul class="dropdown-menu bg-white">
+                    <li>
+                        <a href="pages/articles/article1.html" class="dropdown-item">Effects of artificial fertilizers to the environment</a>
+                    </li>
+                    <li>
+                        <a href="pages/articles/article2.html" class="dropdown-item">Technology-based agriculture</a>
+                    </li>
+                    <li>
+                        <a href="pages/articles/article3.html" class="dropdown-item">Innovative ways of gardening indoor </a>
+                    </li>
+                    <li>
+                        <a href="pages/articles/article4.html" class="dropdown-item">Ways to implement a mini plantation in your apartment </a>
+                    </li>                    
+                        <a href="pages/articles/article5.html" class="dropdown-item">Sustainable and resource efficient farm </a>
+                    </li>                     
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ms-4">
+            <li class="nav-item">
+                <a href="pages/donate.html" class="nav-link underlineNav"><i class="bi bi-cash-stack me-1"></i> Donate</a>
+            </li>
+            
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a href="" class="nav-link underlineNav" data-bs-target="#authModal" data-bs-toggle="modal">Join Us</a>
+            </li>
+            
+        </ul>
+        </div>
+    </nav>
+    
+<div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                
+                <div class="modal-header border-0 pb-0 d-block position-relative">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2 mb-5" data-bs-shadow="none" data-bs-dismiss="modal"></button>
+                    
+                    <ul class="nav auth-tabs" id="authTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin-pane" type="button" role="tab" aria-controls="signin-pane" aria-selected="true">Sign In</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-pane" type="button" role="tab" aria-controls="signup-pane" aria-selected="false">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-body px-0 pb-0 pt-4">
+                    <div class="tab-content" id="authTabContent">
+                        
+                        <div class="tab-pane fade show active" id="signin-pane" role="tabpanel" aria-labelledby="signin-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signinEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signinEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <label for="signinPassword" class="form-label mb-0">Password</label>
+                                        <a href="#" class="text-decoration-none small accent-link">Forgot?</a>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signinPassword" placeholder="••••••••" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label text-muted small" for="rememberMe">Keep me signed in</label>
+                                </div>
+                                <a href="index.html"><button type="submit" class="btn btn-primary w-100 mb-3">Sign Into Account</button></a>
+                            </form>
+
+                            <div class="divider">or continue with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                        <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a> 
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="signup-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signupName" class="form-label">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="signupName" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signupEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupPassword" placeholder="Minimum 8 characters" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mb-3"  data-bs-toggle="tab" data-bs-target="#signup-pane">Create Free Account</button>
+                            </form>
+
+                            <div class="divider">or register with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                    <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a>
+                                </button>
+                            </div>
+                            
+                            <p class="text-center text-muted small mt-4 mb-0">
+                                By signing up, you agree to our <a href="#" class="text-decoration-none accent-link">Terms of Service</a> and <a href="#" class="text-decoration-none accent-link">Privacy Policy</a>.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+
+<section class="bg-light min-vh-100 d-flex align-items-center" id="heroBanner">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1000">
+        <span class="project-badge rounded-pill">Project :: Dawnlight</span>
+        <h1 class="display-2 fw-bold mb-3 main-title">
+          Sustainable <br>
+          <span class="highlight-text">Gardening</span>
+        </h1>
+        <p class="hero-description text-muted fs-5 mb-5 mx-auto mx-lg-0">
+          Our website promotes sustainable and technology-based agriculture practices that help restore soil health, improve food security, and support farmers and agricultural businesses.
+        </p>
+        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+          <a href="#whatWeOffer" class="btn btn-lg rounded-pill btn-primary-custom"><i class="bi bi-arrow-down-circle"></i></a>
+          <a href="#articles" class="btn btn-lg rounded-pill btn-secondary-custom">Learn more</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+        <div class="hero-image-wrapper position-relative">
+          <div class="main-image-container shadow-lg border">
+            <img src="assets/index1.png" class="img-fluid w-100" alt="Sustainable Gardening">
+          </div>
+          
+          <div class="badge-float-tr shadow-lg d-none d-sm-block" data-aos="zoom-in" data-aos-delay="400">
+            <small class="fw-bold">Sustainable</small>
+          </div>
+          
+          <div class="badge-float-bl shadow-lg d-none d-sm-block" data-aos="zoom-in" data-aos-delay="600">
+            <span class="fw-bold">Urban Gardening</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="pt-4 bg-light" id="whatWeOffer">
+<div class="container py-5 mt-5 text-center">
+  <h2 class="section-header display-4" data-aos="fade-up">What we offer</h2>
+
+  <div class="row g-5 justify-content-center mt-2">
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="leaf-card h-100">
+        <div class="bi-container">
+          <i class="bi bi-cpu"></i>
+        </div>
+        <h4 class="card-title mb-3">Technology-embedded gardening</h4>
+        <p class="card-text">
+          Utilizing sensors and automation to monitor soil health in real-time, ensuring optimal growth for vertical urban systems.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="leaf-card h-100">
+        <div class="bi-container">
+          <i class="bi bi-building"></i>
+        </div>
+        <h4 class="card-title mb-3">Urban gardening</h4>
+        <p class="card-text">
+          Growing crops in limited city spaces. We implement high-end technology to achieve successful yields where space is an obstacle.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="leaf-card h-100">
+        <div class="bi-container">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <h4 class="card-title mb-3">Sustainable smart gardening</h4>
+        <p class="card-text">
+          Combining smart technology with sustainability to preserve land and eliminate the need for heavy artificial fertilizers.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    <section class="bg-light py-4" id="explanation">
+        <div class="container-fluid mt-5 overflow-hidden">
+            <div class="row mx-5 justify-content-between">
+                <div class="col-lg-5 mt-5" data-aos="fade-right">
+                    <h1>How does urban gardening work?</h1>
+                    <p>Urban gardening works because of space efficient garden layouts, such as stacking layers of farm to create a vertical farms. There are multiple ways of space efficient gardening as well. </p>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <img src="assets/index2.jpg" class="explanationImage" alt="image alt">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light" id="statistics">
+        <div class="container-fluid overflow-hidden">
+    <div class="row g-4 justify-content-between">
+        
+        <div class="col-md-3">
+            <div class="stat-card" data-aos="fade-up">
+                <div class="badge-total">Community</div>
+                <div class="icon-box">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                
+                <div class="number-viewport">
+                    <div class="digit-list roll-4">
+                        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                </div>
+                <div class="footer-text">Targeted Cities</div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="badge-total">Resources</div>
+                <div class="icon-box">
+                    <i class="bi bi-person-fill-gear"></i>
+                </div>
+                
+                <div class="number-viewport">
+                    <div class="digit-list roll-5">
+                        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                </div>
+                <div class="footer-text">Educational Articles</div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                 <div class="badge-total">Innovation</div>
+                <div class="icon-box">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                
+                <div class="number-viewport">
+                    <div class="digit-list roll-6">
+                        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                </div>
+                <div class="footer-text">Sustainable Smart Practices</div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="badge-total">Community</div>
+                <div class="icon-box">
+                    <i class="bi bi-person-fill-gear"></i>
+                </div>
+                
+                <div class="number-viewport">
+                    <div class="digit-list roll-1">
+                        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                    <div class="digit-list roll-5">
+                        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                </div>
+                <div class="footer-text">People Participating</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    </section>
+    <section class="testimonial-section" id="testimonials" data-aos="fade-up">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What People Say</h2>
+        </div>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators mb-0">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="testimonial-card text-center">
+                        <i class="bi bi-person-circle testimonial-img mb-4"></i>
+                        <div class="quote-icon mb-3">“</div>
+                        <p class="lead italic">"This website helped me understand how natural fertilizers can improve soil quality without damaging the environment. I started applying compost techniques on my farm and noticed healthier crops within months.</p>
+                        <hr class="w-25 mx-auto">
+                        <h6 class="fw-bold mb-0">U Doe Doe</h6>
+                        <small class="text-muted">Rice Farmer</small>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card text-center">
+                        <i class="bi bi-person-circle testimonial-img mb-4"></i>
+                        <div class="quote-icon mb-3">“</div>
+                        <p class="lead italic">"I never knew technology could make farming more resource-efficient. The smart irrigation and sustainable farming articles gave our agricultural business practical ideas to reduce water waste and improve productivity."</p>
+                        <hr class="w-25 mx-auto">
+                        <h6 class="fw-bold mb-0">Daw Hla Hla</h6>
+                        <small class="text-muted">Agricultural Business Owner</small>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card text-center">
+                        <i class="bi bi-person-circle testimonial-img mb-4"></i>
+                        <div class="quote-icon mb-3">“</div>
+                        <p class="lead italic">"As someone living in an apartment, the indoor gardening guides were extremely useful. I learned how to grow vegetables sustainably in a small space while reducing food waste and saving money."</p>
+                        <hr class="w-25 mx-auto">
+                        <h6 class="fw-bold mb-0">Ko Khant Khant</h6>
+                        <small class="text-muted">University Student</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+    
+
+    </section>
+
+    <section class="py-4 bg-light" id="articles">
+        <div class="container">
+            <h2 class="text-center mb-3" data-aos="fade-up">Articles</h2>
+
+            <ul class="nav nav-pills justify-content-center  mb-4" id="pills-tab" role="tablist" data-aos="fade-up" data-aos-delay="100">
+                <li class="nav-item mx-2" role="presentation">
+                  <button class="nav-link active rounded-pill" id="all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button">General Planting</button>
+                </li>
+                <li class="nav-item mx-2" role="presentation">
+                    <button class="nav-link rounded-pill" id="masters-tab" data-bs-toggle="pill" data-bs-target="#pills-masters" type="button">Urban Gardening</button>
+                </li>
+            </ul>
+
+    <div class="tab-content" id="pills-tabContent" data-aos="fade-up" data-aos-delay="200">
+    
+    <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
+      <div class="row g-3 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <div class="img-container">
+                            <span class="category-badge">General Planting</span>
+                            <img src="assets/resourceEfficient.jpg" alt="Indoor Garden">
+                        </div>
+                        <div class="card-body">
+                            <div class="meta-row">
+                                <span><i class="bi bi-clock"></i> 1 Hour</span>
+                            </div>
+                            <h5 class="card-title">Sustainable and resource efficient gardening </h5>
+                            <p class="card-text">Indoor gardening serves as decoration while planting small plants inside your home.</p>
+                            <a href="pages/articles/article5.html" class="btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+          <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <div class="img-container">
+                            <span class="category-badge">General Planting</span>
+                            <img src="assets/tech.png" alt="Indoor Garden">
+                        </div>
+                        <div class="card-body">
+                            <div class="meta-row">
+                                <span><i class="bi bi-clock"></i> 1 Hour</span>
+                            </div>
+                            <h5 class="card-title">Technology-based agriculture</h5>
+                            <p class="card-text">In packed cities or in urban area, technology needs to be utilized to create an efficient garden and to overcome issues you may face gardening in packed spaces.</p>
+                            <a href="pages/articles/article2.html" class="btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <div class="img-container">
+                            <span class="category-badge">General Planting</span>
+                            <img src="assets/fertilizer.jpg" alt="Indoor Garden">
+                        </div>
+                        <div class="card-body">
+                            <div class="meta-row">
+                                <span><i class="bi bi-clock"></i> 1 Hour</span>
+                            </div>
+                            <h5 class="card-title">Effects of artificial fertilizers</h5>
+                            <p class="card-text">In packed cities or in urban area, technology needs to be utilized to create an efficient garden and to overcome issues you may face gardening in packed spaces.</p>
+                            <a href="pages/articles/article1.html" class="btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="tab-pane fade" id="pills-masters" role="tabpanel">
+       <div class="row g-3 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <div class="img-container">
+                            <span class="category-badge">Urban Gardening</span>
+                            <img src="assets/rooftopGardening.jpg" alt="Indoor Garden">
+                        </div>
+                        <div class="card-body">
+                            <div class="meta-row">
+                                <span><i class="bi bi-clock"></i> 1 Hour</span>
+                            </div>
+                            <h5 class="card-title">Ways to implement a mini-plantation in your apartment</h5>
+                            <p class="card-text">Gardening in your home is moderately perplex. You need to manage the space, water it normally and somehow get it enough sunlight amidst the shadow the city is casting. </p>
+                            <a href="pages/articles/article4.html" class="btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                    <div class="article-card">
+                        <div class="img-container">
+                            <span class="category-badge">Urban Gardening</span>
+                            <img src="assets/balconyGardening.jpg" alt="Indoor Garden">
+                        </div>
+                        <div class="card-body">
+                            <div class="meta-row">
+                                <span><i class="bi bi-clock"></i> 1 Hour</span>
+                            </div>
+                            <h5 class="card-title">Innovative ways of gardening indoor</h5>
+                            <p class="card-text">Gardening is your home is moderately perplex. You need to manage the space, water it normally and somehow get it enough sunlight amid the shadow the city is casting. </p>
+                            <a href="pages/articles/article3.html" class="btn-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+        
+      </div>
+       
+      </div>
+    </div>
+
+  </div>
+        </div>
+    </section>
+
+    <section class="py-4 bg-light" id="faq">
+        <div class="container">
+            <div class="container text-center" data-aos="fade-up">
+                <div class="d-flex justify-content-center">
+                    <h2 class="me-2 medium-green" id="frequently">Frequently </h2>
+                    <h2 >Asked Questions</h2>
+                </div>  
+                <p>Questions that have been asked and answered frequently by our users.</p>
+            </div>
+            
+            <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="accordion-item mb-3 border-0 rounded-4 shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold text-success bg-l" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                What is sustainable agriculture?               
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Sustainable agriculture is a farming method that protects the environment, improves soil health and supports long term food production for future generations.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item mb-3 border-0 rounded-4 shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold text-success bg-l" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Why is reducing harmful artificial fertilizer important?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Excessive use of artificial fertilizers can damage soil, pollute water and negatively affect human health and the environment.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item mb-3 border-0 rounded-4 shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold text-success bg-l" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                How can technology improve agriculture?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Technology such as smart irrigation, sensors and automated farming systems can help farmers save resources, increase productivity and farm more efficiently. 
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item mb-3 border-0 rounded-4 shadow-sm">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-4 fw-bold text-success bg-l" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Can people practice sustainable gardening at home?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Yes. People can grow plants using indoor gardening, vertical farming, composting and water saving techniques in apartment, condos or small homes.
+                </div>
+            </div>
+            </div>
+
+            
+
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer-section text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row g-3">
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <div class="logo-icon me-2">
+            <img src="assets/logo.png" alt="logo">
+          </div>
+          <div>
+            <h4 class="mb-0 fw-bold">Khloropolis</h4>
+            <small class="text-success-light">Making cities greener since 2026.</small>
+          </div>
+        </div>
+        <p class="small text-light-o">Here at Khloropolis, we provide a gateway to sustainable urban agriculture and green living!</p>
+        <div class="social-links d-flex gap-2">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/aboutus.html">About Us</a></li>
+          <li><a href="pages/solutions.html">Solutions</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/primary-data.html">Primary Data</a></li>
+          
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Articles</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="pages/articles/article1.html">Effects of artificial fertilizers</a></li>
+          <li><a href="pages/articles/article2.html">Technology-based agriculture</a></li>
+          <li><a href="pages/articles/article3.html">Innovative ways of gardening indoor</a></li>
+          <li><a href="pages/articles/article4.html">Ways to implement a mini plantation in your apartment</a></li>
+          <li><a href="pages/articles/article5.html">Sustainable and resource efficient farm</a></li>
+        </ul>
+      </div>
+
+
+
+    <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Stay Updated</h5>
+        <p class="small text-light-o">Subscribe to our newsletter for park updates and wellness tips.</p>
+        <div class="newsletter-form">
+            <input type="email" class="form-control newsletter-input mb-3" placeholder="Your email address">
+            <button class="btn btn-brand-primary w-100 fw-bold rounded-pill">Subscribe</button>
+        </div>
+    </div>
+
+     
+    </div>
+
+
+
+    <hr class="border-secondary mt-4">
+    <div class="text-center small text-light-o">
+      &copy; 2026 Khloropolis. All rights reserved.
+    </div>
+  </div>
+</footer>
+    
+</body>
+</html>

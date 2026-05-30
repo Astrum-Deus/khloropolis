@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology-Based Agriculture | Khloropolis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../scripts/style.css">
+    <link rel="stylesheet" href="../../scripts/articleStyle.css">
+    <link rel="shortcut icon" href="../../assets/logo.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="p-0 bg-light" data-bs-spy="scroll" data-bs-target="#spy-nav" data-bs-smooth-scroll="true">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <nav class="navbar navbar-expand-lg shadow px-3 sticky-md-top bg-white">
+        <a href="../../index.html" class="navbar-brand">
+            <img src="../../assets/logo.png" alt="logo" id="logoImage">
+           
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-id"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="nav-id">
+        <ul class="navbar-nav ms-2" >
+            <li class="nav-item">
+                <a href="../../index.html" class="nav-link underlineNav"><i class="bi bi-house-fill me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="../aboutus.html" class="nav-link underlineNav"><i class="bi bi-people-fill me-1"></i> About</a>
+            </li>
+            <li class="nav-item">
+                <a href="../solutions.html" class="nav-link underlineNav"><i class="bi bi-book-fill me-1"></i> Solutions</a>
+            </li>
+            <li class="nav-item">
+                <a href="../projects.html" class="nav-link underlineNav"><i class="bi bi-bag-dash-fill me-1"></i> Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="../primarydata.html" class="nav-link underlineNav"><i class="bi bi-clipboard2-data-fill me-1"></i> Primary Data</a>
+            </li>
+            <li class="nav-item dropdown">
+
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-lightbulb-fill me-1"></i> Articles</a>
+                <ul class="dropdown-menu bg-white">
+                    <li>
+                        <a href="article1.html" class="dropdown-item">Effects of artificial fertilizers to the environment</a>
+                    </li>
+                    <li>
+                        <a href="article2.html" class="dropdown-item">Technology-based agriculture</a>
+                    </li>
+                    <li>
+                        <a href="article3.html" class="dropdown-item">Innovative ways of gardening indoor </a>
+                    </li>
+                    <li>
+                        <a href="article4.html" class="dropdown-item">Ways to implement a mini plantation in your apartment </a>
+                    </li>                    
+                        <a href="article5.html" class="dropdown-item">Sustainable and resource efficient farm </a>
+                    </li>               
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ms-4">
+            <li class="nav-item">
+                <a href="../donate.html" class="nav-link underlineNav"><i class="bi bi-cash-stack me-1"></i> Donate</a>
+            </li>
+            
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a href="" class="nav-link underlineNav" data-bs-target="#authModal" data-bs-toggle="modal">Join Us</a>
+            </li>
+            
+        </ul>
+        </div>
+    </nav>
+    
+    <div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                
+                <div class="modal-header border-0 pb-0 d-block position-relative">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-shadow="none" data-bs-dismiss="modal"></button>
+                    
+                    <ul class="nav auth-tabs" id="authTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin-pane" type="button" role="tab" aria-controls="signin-pane" aria-selected="true">Sign In</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-pane" type="button" role="tab" aria-controls="signup-pane" aria-selected="false">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-body px-0 pb-0 pt-4">
+                    <div class="tab-content" id="authTabContent">
+                        
+                        <div class="tab-pane fade show active" id="signin-pane" role="tabpanel" aria-labelledby="signin-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signinEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signinEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <label for="signinPassword" class="form-label mb-0">Password</label>
+                                        <a href="#" class="text-decoration-none small accent-link">Forgot?</a>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signinPassword" placeholder="••••••••" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label text-muted small" for="rememberMe">Keep me signed in</label>
+                                </div>
+                                <a href="../../index.html"><button type="submit" class="btn btn-primary w-100 mb-3">Sign Into Account</button></a>
+                            </form>
+
+                            <div class="divider">or continue with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                        <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a> 
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="signup-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+                            <form action="#" method="POST" onsubmit="event.preventDefault();">
+                                <div class="mb-3">
+                                    <label for="signupName" class="form-label">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="signupName" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="signupEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupPassword" placeholder="Minimum 8 characters" required>
+                                    </div>
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mb-3"  data-bs-toggle="tab" data-bs-target="#signup-pane">Create Free Account</button>
+                            </form>
+
+                            <div class="divider">or register with</div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
+                                    <a href="https://google.com" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-google text-danger"></i> Google</a>
+                                </button>
+                            </div>
+                            
+                            <p class="text-center text-muted small mt-4 mb-0">
+                                By signing up, you agree to our <a href="#" class="text-decoration-none accent-link">Terms of Service</a> and <a href="#" class="text-decoration-none accent-link">Privacy Policy</a>.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarNav">
+        <button class="side-tab" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarNav">
+            Navigation
+        </button>
+
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <nav id="spy-nav" class="nav nav-pills flex-column">
+                <a class="nav-link mb-2" href="#header" data-bs-dismiss="offcanvas">Header</a>
+                <a class="nav-link mb-2" href="#editorialIntro" data-bs-dismiss="offcanvas">Editorial Intro</a>
+                    <a class="nav-link mb-2" href="#section1" data-bs-dismiss="offcanvas">01. Precision Sensor Frameworks</a>
+                    <a class="nav-link mb-2" href="#section2" data-bs-dismiss="offcanvas">02. Core Hardware Configurations</a>
+                    <a class="nav-link mb-2" href="#section3" data-bs-dismiss="offcanvas">03. Recirculating Hydroponics Architecture</a>
+                    <a class="nav-link mb-2" href="#quizSection" data-bs-dismiss="offcanvas">Quiz</a>
+                </nav>
+        </div>
+    </div>
+
+    <section class="hero-section mb-4" id="header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    
+                    <h1 class="hero-title" data-aos="fade-down" data-aos-duration="1000">Smart Agrotech Systems</h1>
+                    
+                    <h2 class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">How data metrics and connected devices redefine metropolitan food cultivation</h2>
+                    
+                    <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        Modern farming inside urban parameters no longer relies on traditional open fields. Smart technology creates responsive growth setups that maximize space and resource conservation.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    <main class="container-fluid px-md-4 px-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-10">
+                
+                <article class="article-card">
+                    
+                    <section class="article-segment" id="editorialIntro">
+                        <p class="editorial-lead" data-aos="fade-up" data-aos-duration="1000">
+                            The integration of internet-connected hardware arrays into small metropolitan growing operations represents a critical shift in how city centers manage food production. By replacing standard soil techniques with computerized infrastructure, urban growers can maintain highly predictable crop lifecycles regardless of external seasonal transformations. This technology acts as a framework to stabilize yield outcomes across changing residential environments.
+                        </p>
+
+                        <div class="row g-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="col-md-6">
+                                <p class="dummy-paragraph">
+                                    Automated internal systems use specialized electronic microcontrollers to track shifting ambient baselines continuously. Probes collect telemetry on chemical levels, humidity parameters, and light exposure durations, adjusting secondary supporting hardware instantly. This immediate responsiveness removes environmental uncertainty from indoor production.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dummy-paragraph">
+                                    As dense urban real estate footprints become more constrained, adopting modular technical setups allows growers to cultivate varieties on vertical vertical structures. Utilizing automated space configurations protects local output from external contamination risks and limits reliance on distant shipping lines.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="media-image-frame" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                            <img src="https://homesteadandchill.com/wp-content/uploads/2019/10/beginners-guide-hobby-greenhouse-feature.jpeg" alt="Primary Editorial Graphic" class="img-tall">
+                            <div class="media-footer-caption">
+                                Specialized indoor environment configurations running synchronized electronic hardware panels.
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="article-segment section-one-container" id="section1">
+                        <h2 class="article-section-title title-main" data-aos="fade-up" data-aos-duration="1000">01. Precision Sensor Frameworks</h2>
+                        
+                        <p class="dummy-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                            Deploying continuous reading hardware blocks inside residential grow centers allows real-time measurement of crucial resource shifts. By streaming data directly to central processing chips, small-scale operations can notice minor moisture drops or mineral imbalances before they affect leaves or plant health, avoiding traditional structural resource waste.
+                        </p>
+
+                        <div class="row g-4 align-items-center my-3">
+                            <div class="col-xl-7 col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                                <h3 class="title-sub">Automated Resource Balancing</h3>
+                                <p class="dummy-paragraph">
+                                    When tracking chips detect shifts in water availability or illumination spectrums, they trigger connected pump modules or adjust multi-band LED lights automatically. This constant balancing minimizes overall human error margins and guarantees that crops receive precise inputs exactly when required.
+                                </p>
+                                <p class="dummy-paragraph">
+                                    Transitioning to automated telemetry pathways changes farming from a set of manual schedules to an active, responsive sequence. This level of optimization allows minimal electrical configurations to support dense growth configurations.
+                                </p>
+                            </div>
+                            
+                            <div class="col-xl-5 col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                                <div class="media-image-frame my-0">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYBR5i3YW-UFILPoFLjuGkKICSiuCr-orWg&s" alt="Side Column Data  Visual" class="img-mid">
+                                    <div class="media-footer-caption">
+                                        Microcontroller circuit configurations tracking real-time delivery telemetry.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="article-segment section-four-container" id="section2">
+                        <h2 class="article-section-title title-main" data-aos="fade-up" data-aos-duration="1000">02. Core Hardware Configurations</h2>
+                        
+                        <p class="dummy-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                            Implementing digital agricultural projects successfully requires setting up three distinct electronic subsystems to coordinate environmental tasks smoothly. These units work together continuously to maintain stability within internal grow areas without needing constant manual adjustment.
+                        </p>
+
+                        <ul class="checked-bullet-list" data-aos="fade-up" data-aos-duration="1000">
+                            <li><strong>Liquid Feedback Circuits:</strong> Electronic sensors check water levels and automatically activate low-voltage pumps to adjust nutrient mixtures.</li>
+                            <li><strong>Dynamic Spectral Nodes:</strong> High-efficiency LED bars change intensity and light wavelengths based on pre-programmed plant growth stages.</li>
+                            <li><strong>Airflow Control Blocks:</strong> Small ventilation systems adjust speed automatically based on temperature changes to keep humidity stable.</li>
+                        </ul>
+
+                        <p class="dummy-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                            In conclusion, linking these hardware parts together builds a highly reliable growth infrastructure. By letting interconnected systems handle everyday maintenance tasks, urban growers can scale up production safely while keeping water use minimal throughout the entire cultivation cycle.
+                        </p>
+                    </section>
+
+                    <section class="article-segment section-one-container" id="section3">
+                        <h2 class="article-section-title title-main" data-aos="fade-up" data-aos-duration="1000">03. Recirculating Hydroponics Architecture</h2>
+                        
+                        <p class="dummy-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                            Using water-based vertical setups instead of traditional dirt layers lets growers bypass common soil diseases entirely. Submerged root structures get minerals directly from automated water channels, saving energy that would normally go toward expanding root zones to search for nutrients.
+                        </p>
+
+                        <div class="row g-4 align-items-center my-3">
+                            <div class="col-xl-7 col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                                <h3 class="title-sub">Closed-Loop Conservation</h3>
+                                <p class="dummy-paragraph">
+                                    Closed-loop piping setups keep water moving continuously through secure holding tanks rather than letting it drain away into local storm sewers. This recirculation design can reduce overall water usage by up to 95% compared to typical backyard agricultural plots.
+                                </p>
+                                <p class="dummy-paragraph">
+                                    Keeping liquids contained also protects local municipal water networks from chemical runoff. This makes water-based agricultural systems a practical solution for urban homes and apartments.
+                                </p>
+                            </div>
+                            
+                            <div class="col-xl-5 col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                                <div class="media-image-frame my-0">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncbLNn9lx-UMPLt8gZIwv0wiWzXhTjzQXQg&s" alt="Side Column Data Visual" class="img-mid">
+                                    <div class="media-footer-caption">
+                                       Multi-tier water channel designs optimizing indoor surface areas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 my-2">
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                                <div class="media-image-frame my-0">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL7upMnts1Afd52kuD1E155Uw4HElcnq8Naw&s" alt="Grid Element Left" class="img-short">
+                                    <div class="media-footer-caption">Closed-loop nutrient channel setups.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                                <div class="media-image-frame my-0">
+                                    <img src="https://thumbs.dreamstime.com/b/vertical-farming-setup-featuring-multiple-tiers-lush-green-plants-likely-basil-ocimum-basilicum-under-rows-led-grow-lights-391790404.jpg" alt="Grid Element Right" class="img-short">
+                                    <div class="media-footer-caption">Multi-tier vertical farming setups.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                    <section class="article-segment quiz-container" id="quizSection">
+                        <div class="quiz-cta-container" data-aos="zoom-in" data-aos-duration="1000">
+                            <h3 class="quiz-cta-title">Ready to Test Your Knowledge?</h3>
+                            <p class="quiz-cta-text">
+                                Challenge yourself with our quick assessment block to verify your comprehension of the concepts covered in this guide.
+                            </p>
+                            <a href="#" class="quiz-action-btn" data-bs-toggle="modal" data-bs-target="#quizModal1">
+                                Start Module Quiz <i class="bi bi-arrow-right-circle-fill"></i>
+                            </a>
+                        </div>
+
+                        <p class="dummy-paragraph mb-0 mt-4" data-aos="fade-up" data-aos-duration="1000">
+                         In conclusion, combining electronic tracking arrays with vertical water networks completely redefines the potential of city-based food production. Using responsive hardware systems enables city communities to build decentralized food setups right inside their neighborhoods, paving the way for sustainable urban farming.
+                        </p>
+                    </section>
+
+                    
+
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade quiz-modal" id="quizModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <div class="quiz-header-badge mb-2">Question 01 of 02</div>
+                    <h3 class="quiz-question-title m-0">What is the primary conservation benefit of using a closed-loop hydroponic pipeline?</h3>
+                </div>
+                <div class="modal-body p-0 pt-2">
+                    
+                    <input type="radio" name="q1" id="q1a" class="d-none">
+                    <label for="q1a" class="quiz-option-label">It reduces total water usage by up to 95% via continuous recirculation</label>
+                    
+                    <input type="radio" name="q1" id="q1b" class="d-none">
+                    <label for="q1b" class="quiz-option-label">It replaces the requirement for electrical monitoring hardware components</label>
+
+                    <div class="feedback-wrong alert alert-danger">
+                        <i class="bi bi-x-circle-fill"></i> Try again! That is incorrect.
+                    </div>
+                    <div class="feedback-right alert alert-success">
+                        <i class="bi bi-check-circle-fill"></i> Correct! Excellent job.
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button class="quiz-next-btn d-flex align-items-center gap-2" data-bs-target="#quizModal2" data-bs-toggle="modal">
+                        Next Question <i class="bi bi-arrow-right-short"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade quiz-modal" id="quizModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <div class="quiz-header-badge mb-2">Question 02 of 02</div>
+                    <h3 class="quiz-question-title m-0">How do real-time electronic sensor nodes assist modern indoor growers?</h3>
+                </div>
+                <div class="modal-body p-0 pt-2">
+                    
+                    <input type="radio" name="q2" id="q2a" class="d-none">
+                    <label for="q2a" class="quiz-option-label">They accelerate the natural breakdown speed of traditional topsoil layers</label>
+                    
+                    <input type="radio" name="q2" id="q2b" class="d-none">
+                    <label for="q2b" class="quiz-option-label">They catch early resource imbalances before they impact crop foliage health</label>
+
+                    <div class="feedback-wrong alert alert-danger">
+                        <i class="bi bi-x-circle-fill"></i> Try again! That is incorrect.
+                    </div>
+                    <div class="feedback-right alert alert-success">
+                        <i class="bi bi-check-circle-fill"></i> Correct! Excellent job.
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button class="quiz-finish-btn" data-bs-dismiss="modal">
+                        Finish Module
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer class="footer-section text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row g-3">
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <div class="logo-icon me-2">
+            <img src="../../assets/logo.png" alt="logo">
+          </div>
+          <div>
+            <h4 class="mb-0 fw-bold">Khloropolis</h4>
+            <small class="text-success-light">Making cities greener since 2026.</small>
+          </div>
+        </div>
+        <p class="small text-light-o">Here at Khloropolis, we provide a gateway to sustainable urban agriculture and green living!</p>
+        <div class="social-links d-flex gap-2">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../aboutus.html">About Us</a></li>
+          <li><a href="../solutions.html">Solutions</a></li>
+          <li><a href="../projects.html">Projects</a></li> 
+          <li><a href="../primary-data.html">Primary Data</a></li>
+          
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Articles</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="article1.html">Effects of artificial fertilizers</a></li>
+          <li><a href="article2.html">Technology-based agriculture</a></li>
+          <li><a href="article3.html">Innovative ways of gardening indoor</a></li>
+          <li><a href="article4.html">Ways to implement a mini plantation in your apartment</a></li>
+          <li><a href="article5.html">Sustainable and resource efficient farm</a></li>
+        </ul>
+      </div>
+
+
+
+    <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Stay Updated</h5>
+        <p class="small text-light-o">Subscribe to our newsletter for park updates and wellness tips.</p>
+        <div class="newsletter-form">
+            <input type="email" class="form-control newsletter-input mb-3" placeholder="Your email address">
+            <button class="btn btn-brand-primary w-100 fw-bold rounded-pill">Subscribe</button>
+        </div>
+    </div>
+
+     
+    </div>
+
+
+
+    <hr class="border-secondary mt-4">
+    <div class="text-center small text-light-o">
+      &copy; 2026 Khloropolis. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
